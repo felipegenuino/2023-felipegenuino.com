@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 
 Route::resources([
-//    'works' => WorkController::class,
+    // 'works' => WorkController::class,
     'posts' => PostController::class
 ]);
 
@@ -52,4 +52,4 @@ Route::middleware('auth')->group(function () {
 // });
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
