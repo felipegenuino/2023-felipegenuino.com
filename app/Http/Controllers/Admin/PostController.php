@@ -11,7 +11,8 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(){
+    public function index()
+    {
         $posts = Post::orderBy('created_at', 'desc')
             ->orderBy('published', 'desc')
             ->paginate(10);
@@ -24,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.posts.create');
     }
 
     /**

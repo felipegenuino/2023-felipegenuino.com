@@ -15,3 +15,10 @@ php artisan tinker
 
 Post::factory()->count(20)->create()
 ```
+
+### Commands
+
+```bash
+# Verificar todas rotas existentes
+php artisan route:list
+```
