@@ -11,8 +11,17 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        // ->except(['show']);
+    }
+
     public function index()
     {
+
         $posts = Post::orderBy('created_at', 'desc')
             ->orderBy('published', 'desc')
             ->paginate(10);
