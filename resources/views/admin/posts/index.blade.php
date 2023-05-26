@@ -95,7 +95,7 @@
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="flex gap-2">
-                                        <a href="/posts/{{ $post->slug }}"
+                                        <a href="{{ route('posts.show', $post->id) }}"
                                            aria-label="Acessar post {{ $post->title }}"
                                            title="Acessar post: {{ $post->title }}">
 
@@ -109,7 +109,7 @@
                                         </a>
 
 
-                                        <a href="{{route('posts.edit', $post->id) }}"
+                                        <a href="{{ route('posts.edit', $post->id) }}"
                                            title="Editar post: {{ $post->title }}">
                                             <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
                                                  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
